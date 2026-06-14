@@ -1,0 +1,74 @@
+{
+    "name": "tempi-marathon/filament-local-avatars",
+    "description": "Local initials avatars via data-URI SVG",
+    "keywords": [
+        "tempi-marathon",
+        "laravel",
+        "filamentphp",
+        "filament",
+        "filament-plugin",
+        "filament-local-avatars",
+        "avatar"
+    ],
+    "homepage": "https://github.com/tempi-marathon/filament-local-avatars",
+    "support": {
+        "issues": "https://github.com/tempi-marathon/filament-local-avatars/issues",
+        "source": "https://github.com/tempi-marathon/filament-local-avatars"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Maarten Molenschot",
+            "email": "maarten.molenschot@gosuperscript.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.5",
+        "filament/filament": "^5.0",
+        "spatie/laravel-package-tools": "^1.93"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.1",
+        "laravel/pint": "^1.29",
+        "orchestra/testbench": "^11.0",
+        "pestphp/pest": "^4.0",
+        "pestphp/pest-plugin-laravel": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "TempiMarathon\\FilamentLocalAvatars\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TempiMarathon\\FilamentLocalAvatars\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "test": [
+            "@test:style",
+            "@test:types",
+            "@test:unit"
+        ],
+        "test:unit": "vendor/bin/pest --coverage --min=90",
+        "test:types": "vendor/bin/phpstan analyse",
+        "test:style": "vendor/bin/pint --test"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TempiMarathon\\FilamentLocalAvatars\\FilamentLocalAvatarsServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
