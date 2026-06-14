@@ -18,9 +18,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Maarten Molenschot",
-            "email": "maarten.molenschot@gosuperscript.com",
-            "role": "Developer"
+            "name": "tempi-marathon",
+            "homepage": "https://github.com/tempi-marathon"
         }
     ],
     "require": {
